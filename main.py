@@ -63,14 +63,22 @@ if not args.motd_lag and not args.join_crash:
     console.print(table)
     sys.exit(-1)
 
-def make_rainbow(message):
+def make_rainbow(message : str) -> str:
+    '''
+    make string raibow 
+    '''
+
     colors = itertools.cycle(['§a', '§2', '§b', '§3', '§c', '§4', '§d', '§5', '§e', '§6', '§f', '§7'])
     out = ''
     for char in message:
         out += next(colors) + char
     return out
 
-def varint_unpack(s):
+def varint_unpack(s : bytes) -> tuple[int, str]:
+    '''
+    unpack varint from bytes
+    '''
+
     d, l = 0, 0
     length = len(s)
     if length > 5:
@@ -84,7 +92,10 @@ def varint_unpack(s):
     return (d, s[l:])
 
 
-def varint_pack(d):
+def varint_pack(d : int) -> bytes:
+    '''
+    pack int to varint
+    '''
     o = b''
     while True:
         b = d & 0x7F
@@ -94,7 +105,10 @@ def varint_pack(d):
             break
     return o
 
-def data_pack(data):
+def data_pack(data : bytes) -> bytes:
+    '''
+    make a packet understable by minecraft
+    '''
     return varint_pack(len(data)) + data
 
 server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
