@@ -3,10 +3,8 @@ import sys
 import json
 import socket
 import struct
-import base64
 import argparse
 import itertools
-import threading
 
 from rich.console import Console
 from rich.table import Table
