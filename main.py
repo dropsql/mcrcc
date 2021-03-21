@@ -20,7 +20,7 @@ AUTHOR = 'dropskid'
 BANNER = f'''
 [red]
 [green].--------------------------.-------------.[/green]
-|   __ _  ________________ [pink]: [white]MRCC[/white]            :[/pink]
+|   __ _  ________________ [pink]: [white]MRCC[/white]        :[/pink]
 |  /  ' \/ __/ __/ __/ __/ [pink]: [white]version {VERSION}[/white] :[/pink]
 | /_/_/_/\__/_/  \__/\__/  [pink]: [white]by {AUTHOR}[/white] :[/pink]
 [green]'--------------------------'-------------'[/green]
