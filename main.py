@@ -19,11 +19,10 @@ AUTHOR = 'dropskid'
 
 BANNER = f'''
 [red]
-[green].--------------------------.-------------.[/green]
-|   __ _  ________________ [pink]: [white]MRCC[/white]        :[/pink]
-|  /  ' \/ __/ __/ __/ __/ [pink]: [white]version {VERSION}[/white] :[/pink]
-| /_/_/_/\__/_/  \__/\__/  [pink]: [white]by {AUTHOR}[/white] :[/pink]
-[green]'--------------------------'-------------'[/green]
+  __ _  ________________ 
+ /  ' \/ __/ __/ __/ __/ [pink]:/ [white]version {VERSION}[/white] /:[/pink]
+/_/_/_/\__/_/  \__/\__/  [pink]:/ [white]by {AUTHOR}[/white] /:[/pink]
+[green]-------------------------'---------------'[/green]
 [/red]
 '''
 
@@ -39,8 +38,8 @@ server_options.add_argument('-p', '--port', default=1337, required=False, metava
 minecraft_options = parser.add_argument_group('minecraft options')
 minecraft_options.add_argument('-m', '--message', default='hello world', required=False, metavar='', help='motd\'s message', dest='message', type=str)
 minecraft_options.add_argument('-v', '--version', default='friendlyspigot', required=False, metavar='', help='server\'s version', dest='version', type=str)
-minecraft_options.add_argument('--online-players', default=53, required=False, metavar='', help='spoofed online players', dest='players_online', type=int)
-minecraft_options.add_argument('--max-players', default=200, required=False, metavar='', help='spoofed max players', dest='players_max', type=int)
+minecraft_options.add_argument('--online-players', default=53, required=False, metavar='', help='spoof online players', dest='players_online', type=int)
+minecraft_options.add_argument('--max-players', default=200, required=False, metavar='', help='spoof max players', dest='players_max', type=int)
 
 
 crashing_options = parser.add_argument_group('crashing options')
